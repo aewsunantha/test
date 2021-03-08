@@ -28,7 +28,7 @@ const readDbFile = () : DB => {
   return db
 }
 
-app.get('/person', (req,res) => {
+app.get('/person', (req, res) => {
   res.status(200)
   res.json(readDbFile())
 })
@@ -44,7 +44,7 @@ app.post('/person', (req, res) => {
   res.json({message:'Add new person successfully'})
 })
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8000
 
 app.listen(port, () => {
   console.log(`  App is running at port ${port}`)
